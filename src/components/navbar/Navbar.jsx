@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "next/link";
-import { list } from "postcss";
+import Darkmode from "../darkmode/Darkmode";
 
 const Links = [
   {
@@ -37,14 +37,20 @@ const Links = [
 
 export default function Navbar() {
   return (
-    <nav className="flex justify-between px-12 py-5 min-w-full">
-      <Link href="/">devbyodi</Link>
+    <nav className="flex justify-between bg-white py-5 min-w-full px-5 lg:px-40 md:px-20 font-semibold text-sky-900">
+      <Link
+        className=" cursor-pointer hover:text-emerald-300 transition-all ease-in-out duration-300"
+        href="/"
+      >
+        ODI
+      </Link>
 
-      <div className="flex justify-between w-2/5">
+      <Darkmode />
+      <div className="flex justify-between w-9/12 md:w-5/12 lg:w-5/12 ">
         {Links.map((v, i, a) => {
           return (
             <Link
-              className=" text-white hover:text-green-300 transition-all ease-in-out duration-300"
+              className=" text-inherit cursor-pointer hover:text-emerald-300 transition-all ease-in-out duration-300"
               key={v.id}
               href={v.url}
             >

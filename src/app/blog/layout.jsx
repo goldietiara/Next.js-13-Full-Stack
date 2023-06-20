@@ -12,7 +12,7 @@ import React from "react";
 // export default layoutBlog;
 export default function blogLayout({ childern }) {
   return (
-    <div>
+    <div className="px-5 lg:px-40 md:px-20">
       <h1>Blog Layout</h1>
       {childern}
     </div>
